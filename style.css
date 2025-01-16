@@ -26,22 +26,37 @@ form button {
 .projects{
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
-  gap: 1em; /* Optional: Adds spacing between grid items */
+  gap: 1em; 
 }
 article {
   display: grid;
-  grid-template-rows: subgrid; /* Align rows with subgrid */
-  grid-row: span 3; /* Each article spans 3 rows */
-  margin: 0; /* Remove default margin from <h2> for better alignment */
+  grid-template-rows: subgrid; 
+  grid-row: span 3; 
+  margin: 0; 
 }
+
 
 /* Optional: Adjust spacing inside articles */
 article h2 {
-  margin: 0; /* Remove margin for tighter layout */
+  margin: 0; 
 }
 
 article img {
-  max-width: 100%; /* Ensure images fit within the grid */
+  max-width: 100%; 
+}
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.1; 
+  text-wrap: balance; 
+}
+
+h1 {
+  font-size: 400%; 
+  margin-top: 0.5em; 
+}
+.cv{
+  margin-bottom: 2em; /* Spacing between sections */
+  padding: 1em; /* Padding inside each section */
+  border-bottom: 1px solid var(--color-accent); /* Subtle bottom border */
 }
 body {
     /* Set line height to 1.5 times the font size
