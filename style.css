@@ -1,6 +1,81 @@
+:root{
+  --color-accent: oklch(20% 60% 0);
+}
+form input, form textarea, form button {
+  font: inherit;
+}
+form {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1em;
+}
+
+form label {
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-column: 1 / -1;
+}
+
+form input, form textarea {
+  grid-column: 2 / 3;
+}
+
+form button {
+  grid-column: 1 / -1;
+}
+.projects{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+  gap: 1em; /* Optional: Adds spacing between grid items */
+}
+article {
+  display: grid;
+  grid-template-rows: subgrid; /* Align rows with subgrid */
+  grid-row: span 3; /* Each article spans 3 rows */
+  margin: 0; /* Remove default margin from <h2> for better alignment */
+}
+
+/* Optional: Adjust spacing inside articles */
+article h2 {
+  margin: 0; /* Remove margin for tighter layout */
+}
+
+article img {
+  max-width: 100%; /* Ensure images fit within the grid */
+}
 body {
     /* Set line height to 1.5 times the font size
-         and use the OS’s UI font as the website font
-       */
+    and use the OS’s UI font as the website font
+    */
     font: 100%/1.5 system-ui;
+    max-width: 100ch;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2%;
+
+    
+
+    nav{
+      display: flex;
+      margin-bottom: 3ch;
+      border-bottom-width: 1px;
+      border-bottom-style: solid;
+      border-bottom-color: oklch(80% 3% 200);
+    }
+    nav a{
+      flex: 1;
+      text-decoration: none;
+      color: inherit;
+      text-align: center;
+      padding: 0.5em;
+    }
+    nav a.current{
+      border-bottom-width: 0.4em;
+      border-bottom-style: solid;
+      border-bottom-color: oklch(80% 3% 200);
+    }
+
+    nav a:hover {
+      border-bottom: 0.4em solid var(--color-accent);
+    }
   }
