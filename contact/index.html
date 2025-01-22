@@ -7,26 +7,19 @@
     <title>Contacts</title>
 </head>
 <body>
-    <nav>
-        <a href = ../index.html>Home</a>
-        <a href = "index.html" class = "current">Contact Page</a>
-        <a href = ../projects/index.html>Projects Page</a>
-        <a href = ../CV/index.html>CV</a>
-        <a href = "https://github.com/MatthewBudding" target = "_blank">GitHub</a>
-
-    </nav>
     <h1>Contact me: </h1>
-    <form action = "mailto:matthewbudding8@gmail.com" method = "POST" enctype = "text/plain" > 
-        <label for="email">Email Address:</label>
-        <input id="email" name="email" type="email" required>
-
-        <label for="subject">Subject:</label>
-        <input id="subject" name="subject">
-
-        <label for="body">Message:</label>
-        <textarea id="body" name="body" rows="2" cols="30"></textarea>
-
-        <button>Send</button>
-    </form>
+    <form action="mailto:matt33b33@gmail.com" method="GET">
+        <label>
+          Subject:
+          <input type="text" name="subject">
+        </label>
+        <label>
+          Message:
+          <textarea name="body"></textarea>
+        </label>
+        <button type="submit">Send</button>
+      </form>
+      
+    <script type="module" src="../global.js"></script>
 </body>
 </html>
