@@ -2,13 +2,13 @@
     {
         "title": "How Rain Affects Temperature",
         "Year" : "2025",
-        "image": "../images/WeatherProject.png",
+        "image": "./images/WeatherProject.png",
         "description": "I wanted to determine if the amount of rain a city gets changes the average temperature of the city. To do this I took two cities (Miami and San Diego) on the extremes for amount of rain throughout a year and compared their temperatures. I found that Miami is consistantly warmer than San Diego but it is hard to conclude that this is because of the rain "
     },
     {
         "title": "Bias In the News",
         "Year" : "2023",
-        "image": "../images/BiasInNews.png",
+        "image": "./images/BiasInNews.png",
         "description": "Every news site in the world was covering the situation occurring in Israel and Palestine, These sites all have their own beliefs changing the delivery of the news. This project was meant to measure that bias."
     },
     {
