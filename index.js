@@ -1,5 +1,4 @@
-import { fetchJSON, renderProjects } from './global.js';
-import { fetchGitHubData } from './global.js';
+import { fetchJSON, renderProjects, fetchGitHubData } from '../global.js';
 
 
 document.addEventListener('DOMContentLoaded', async () => {
