@@ -110,4 +110,24 @@ body {
   input, textarea, button, select {
     font-family: inherit;
   }
-    
+  #profile-stats {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+  }
+  
+  dl {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    margin: 0;
+  }
+  
+  dt {
+    font-weight: bold;
+  }
+  
+  dd {
+    margin-left: 10px;
+  }
+  

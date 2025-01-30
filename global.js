@@ -1,5 +1,4 @@
 console.log("IT'S ALIVE!");
-
 // Define pages
 const pages = [
   { url: '', title: 'Home' },
@@ -81,22 +80,64 @@ select.addEventListener('input', function (event) {
   localStorage.setItem('color-scheme', scheme);
 });
   
-const form = document.querySelector('form');
 
-form?.addEventListener('submit', function (event) {
-  event.preventDefault(); // Prevent the default form submission
-  console.log('Form submission intercepted!');
-});
-const data = new FormData(form);
-for (let [name, value] of data) {
-    console.log(name, value);
-  }
-let params = [];
-for (let [name, value] of data) {
-    params.push(`${name}=${encodeURIComponent(value)}`);
+export async function fetchJSON(url) {
+    try {
+        // Fetch the JSON file from the given URL
+        const response = await fetch(url);
+        if (!response.ok) {
+          throw new Error(`Failed to fetch projects: ${response.statusText}`);
+        }
+        console.log('Response received:', response); 
+        const data = await response.json();
+        return data; 
+        
+    } catch (error) {
+        console.error('Error fetching or parsing JSON data:', error);
+    }
 }
-const url = `${form.action}?${params.join('&')}`;
-console.log('Final URL:', url);
-location.href = url;
+export function renderProjects(projects, containerElement, headingLevel = 'h2') {
+  if (!containerElement) {
+      console.error("Error: Invalid container element.");
+      return;
+  }
 
-    
+  // Clear existing content
+  containerElement.innerHTML = '';
+
+  // Loop through the projects and create elements
+  projects.forEach((project) => {
+      const article = document.createElement('article');
+
+      // Dynamically create heading
+      const heading = document.createElement(headingLevel);
+      heading.textContent = project.title;
+
+      const image = document.createElement('img');
+      image.src = project.image;
+      image.alt = project.title;
+
+      const description = document.createElement('p');
+      description.textContent = project.description;
+
+      // Append elements to article
+      article.appendChild(heading);
+      article.appendChild(image);
+      article.appendChild(description);
+
+      // Append article to container
+      containerElement.appendChild(article);
+  });
+}
+export async function fetchGitHubData(username) {
+  try {
+    const response = await fetch(`https://api.github.com/users/${username}`);
+    if (!response.ok) {
+      throw new Error(`GitHub API Error: ${response.statusText}`);
+    }
+    const data = await response.json();
+    return data; // Returns the parsed data
+  } catch (error) {
+    console.error('Error fetching GitHub data:', error);
+  }
+}
