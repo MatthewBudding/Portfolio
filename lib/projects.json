@@ -1,61 +1,73 @@
 [
     {
         "title": "How Rain Affects Temperature",
+        "Year" : "2025",
         "image": "../images/WeatherProject.png",
         "description": "I wanted to determine if the amount of rain a city gets changes the average temperature of the city. To do this I took two cities (Miami and San Diego) on the extremes for amount of rain throughout a year and compared their temperatures. I found that Miami is consistantly warmer than San Diego but it is hard to conclude that this is because of the rain "
     },
     {
         "title": "Bias In the News",
+        "Year" : "2023",
         "image": "../images/BiasInNews.png",
         "description": "Every news site in the world was covering the situation occurring in Israel and Palestine, These sites all have their own beliefs changing the delivery of the news. This project was meant to measure that bias."
     },
     {
         "title": "Fugiat laborum id aut.",
+        "Year" : "PLACEHOLDER",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Quibusdam rem fugit culpa? Maxime excepturi nihil perspiciatis, reiciendis at explicabo nesciunt! Itaque quidem molestiae, inventore non praesentium eum cupiditate assumenda quibusdam illum illo minus nisi quis quo deleniti. Voluptatibus."
     },
     {
         "title": "Deleniti laudantium nemo nesciunt.",
+        "Year" : "PLACEHOLDER",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Ducimus, autem in mollitia beatae velit deleniti earum dignissimos distinctio nostrum reiciendis minus! Delectus excepturi tempore dolore ut neque dolorum, pariatur, quaerat dolor in sapiente quisquam soluta enim aliquid autem?"
     },
     {
         "title": "Debitis magnam cumque perferendis.",
+        "Year" : "PLACEHOLDER",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Amet dignissimos corrupti repudiandae repellat. Consequatur officia quas voluptates quasi nihil aut recusandae obcaecati odit, nobis quo et ut eveniet reprehenderit tempore corporis. Nisi facilis consequuntur nostrum error. Ratione, blanditiis!"
     },
     {
         "title": "Repudiandae neque earum vitae?",
+        "Year" : "PLACEHOLDER",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Necessitatibus dolore, ratione reiciendis sint reprehenderit facere sunt iure magnam officiis a corrupti labore nisi eligendi expedita. Nulla quidem culpa molestiae accusantium assumenda magnam dolorem, libero quaerat, quo, sed dolore!"
     },
     {
         "title": "Laboriosam ad eius accusamus?",
+        "Year" : "PLACEHOLDER",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Ipsam incidunt harum voluptate iste saepe cupiditate? Voluptas, earum iusto autem modi molestias iure saepe incidunt, quibusdam obcaecati consequuntur enim repellat neque voluptate similique aperiam optio numquam omnis vel recusandae!"
     },
     {
         "title": "Illo, et! Molestiae, cupiditate!",
+        "Year" : "PLACEHOLDER",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Consequuntur illo iure fuga laudantium saepe recusandae labore harum est error sunt nisi quo sequi consequatur possimus corporis, atque illum quas minima dicta, tempore reiciendis. Ex officiis sint assumenda voluptatum!"
     },
     {
         "title": "Autem a quam dolore.",
+        "Year" : "PLACEHOLDER",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Quam dolore neque est cumque laboriosam tempora voluptatibus dolores! Repellat odit a officia eaque inventore! Magnam illo eos maiores odio hic expedita, harum labore libero nulla aliquid? Nobis, voluptate similique!"
     },
     {
         "title": "Nulla rerum cumque doloribus?",
+        "Year" : "PLACEHOLDER",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Labore unde neque possimus natus eius veritatis dignissimos repudiandae odio cupiditate, temporibus, doloribus placeat autem provident quas, recusandae asperiores aut vitae voluptate consequatur necessitatibus id saepe itaque accusantium similique! Illum."
     },
     {
         "title": "Praesentium mollitia perferendis reprehenderit.",
+        "Year" : "PLACEHOLDER",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Nostrum necessitatibus dignissimos aliquid, id eum illum vero ipsa eligendi sunt a, facilis dolor laboriosam deleniti quidem officiis corrupti cum temporibus officia perspiciatis aspernatur. Rem, nisi. Ab odit dicta voluptatum."
     },
     {
         "title": "Natus illo alias error!",
+        "Year" : "PLACEHOLDER",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Omnis necessitatibus, error, laboriosam, nam architecto recusandae harum autem quia perferendis sunt enim! Iste expedita iure rem doloremque suscipit ipsum! Odit blanditiis ex vero odio autem dolore maxime sed cumque."
     }
