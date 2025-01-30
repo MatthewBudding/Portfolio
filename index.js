@@ -3,7 +3,7 @@ import { fetchJSON, renderProjects, fetchGitHubData } from './global.js';
 
 
 document.addEventListener('DOMContentLoaded', async () => {
-    const projects = await fetchJSON('../lib/projects.json');
+    const projects = await fetchJSON('./lib/projects.json');
     const latestProjects = projects.slice(0, 3);
     // Get the container element and the projects-title element
     const projectsContainer = document.querySelector('.projects');
