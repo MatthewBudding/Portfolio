@@ -120,15 +120,31 @@ export function renderProjects(projects, containerElement, headingLevel = 'h2') 
       const description = document.createElement('p');
       description.textContent = project.description;
 
+      // Create a new div for the year and description
+      const yearDiv = document.createElement('div');
+      yearDiv.classList.add('project-year');  // Add a class for styling
+
+      // Add year text to the div
+      const yearText = document.createElement('p');
+      yearText.textContent = `Year: ${project.year === "PLACEHOLDER" ? 'TBD' : project.year}`;
+      yearDiv.appendChild(yearText);
+
+      // Wrap description and yearDiv in a container to avoid overlap
+      const projectDetails = document.createElement('div');
+      projectDetails.classList.add('project-details');
+      projectDetails.appendChild(description);
+      projectDetails.appendChild(yearDiv);
+
       // Append elements to article
       article.appendChild(heading);
       article.appendChild(image);
-      article.appendChild(description);
+      article.appendChild(projectDetails);
 
       // Append article to container
       containerElement.appendChild(article);
   });
 }
+
 export async function fetchGitHubData(username) {
   try {
     const response = await fetch(`https://api.github.com/users/${username}`);
@@ -141,3 +157,4 @@ export async function fetchGitHubData(username) {
     console.error('Error fetching GitHub data:', error);
   }
 }
+
