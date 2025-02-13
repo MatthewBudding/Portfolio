@@ -1,18 +1,30 @@
-- name: Checkout
-  uses: actions/checkout@v4
-  with:
-    fetch-depth: '0'
+name: Deploy
 
-- name: Run Elocuent
-  run: |
-    npx elocuent -d . -o meta/loc.csv
+permissions:
+  contents: write  # Allow write access to repository contents (for committing and pushing)
+  pages: write     # If you're deploying to GitHub Pages
+  id-token: write  # If your deployment requires id-token permissions
 
-- name: Commit and Push
-  run: |
-    git config --local user.email "action@github.com"
-    git config --local user.name "GitHub Action"
-    mkdir -p meta
-    git pull
-    git add -f meta/loc.csv
-    git commit -m "Update code statistics" || echo "No changes to commit"
-    git push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: '0'  # Fetch all git history for every branch and tag
+
+      - name: Run Elocuent
+        run: |
+          npx elocuent -d . -o meta/loc.csv  # Generate the CSV with the code statistics
+
+      - name: Commit and Push
+        run: |
+          git config --local user.email "action@github.com"  # Set GitHub Action user details
+          git config --local user.name "GitHub Action"
+          mkdir -p meta  # Create the meta directory to store the CSV file
+          git pull  # Ensure we're up-to-date with the latest changes
+          git add -f meta/loc.csv  # Add the generated CSV file to the commit
+          git commit -m "Update code statistics" || echo "No changes to commit"  # Commit the changes if any
+          git push  # Push the changes to the repository
