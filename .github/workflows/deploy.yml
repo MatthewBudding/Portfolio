@@ -1,5 +1,10 @@
 name: Deploy
 
+on:
+  push:
+    branches:
+      - main  # This will trigger the workflow on push to the 'main' branch
+
 permissions:
   contents: write  # Allow write access to repository contents (for committing and pushing)
   pages: write     # If you're deploying to GitHub Pages
