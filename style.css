@@ -229,7 +229,7 @@ body {
   path {
     cursor: pointer;
     transition: 300ms;
-  }
+  } 
   .selected {
     --color: oklch(60% 45% 0) !important;
   
@@ -237,3 +237,76 @@ body {
       fill: var(--color);
     }
   }
+
+  .gridlines line {
+    stroke: #ddd;
+    stroke-width: 1;
+    shape-rendering: crispEdges;
+  }
+  
+  .gridlines path {
+    stroke: none;
+  }
+  
+  dl.info dt {
+    font-weight: bold;
+    color: #666;
+  }
+  
+  .tooltip {
+    position: fixed;
+    top: 1em;
+    left: 1em;
+    z-index: 1000;
+  }
+  
+  circle:hover {
+    transform: scale(1.5);
+  }
+  dl.info {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.5em;
+    margin: 0;
+    padding: 1em;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 0.5em;
+    transition-duration: 500ms;
+    transition-property: opacity, visibility;
+    position: fixed;
+    top: 1em;
+    left: 1em;
+  }
+  
+  dl.info[hidden]:not(:hover, :focus-within) {
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  circle {
+    transition: 200ms;
+    transform-origin: center;
+    transform-box: fill-box;
+  }
+  
+  circle:hover {
+    transform: scale(1.5);
+  }
+@keyframes marching-ants {
+  to {
+    stroke-dashoffset: -8; /* 5 + 3 */
+  }
+}
+
+.selection {
+  fill-opacity: 0.1;
+  stroke: black;
+  stroke-opacity: 0.7;
+  stroke-dasharray: 5 3;
+  animation: marching-ants 2s linear infinite;
+}
+
+circle.selected {
+  fill: #ff6b6b;
+}
